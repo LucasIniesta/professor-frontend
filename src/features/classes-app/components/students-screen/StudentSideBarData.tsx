@@ -62,7 +62,7 @@ const StudentSidebarData: React.FC<StudentSidebarDataProps> = ({
           fullWidth 
           sx={{ marginTop: '16px' }}
         >
-          Enviar
+          Lançar Notas e Frequência
         </Button>
       </Box>
     </Box>

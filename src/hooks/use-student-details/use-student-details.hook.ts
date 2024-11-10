@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { UseStudentDetails } from './use-student-details.types';
+import { UseStudentDetails} from '../use-student-details/use-student-details.types';
 import { Student, StudentFormValues } from '../../features/classes-app/components/students-screen/StudentSideBarData.types'
 import { submitStudentDetails } from '../../services/student-details/student-details.service';
 
@@ -32,10 +32,7 @@ export const useStudentDetails = (): UseStudentDetails => {
 
   const handleFormSubmit = async () => {
     if (selectedStudent) {
-      await submitStudentDetails({
-        studentId: selectedStudent.id,
-        ...formValues,
-      });
+      await submitStudentDetails(selectedStudent.id, formValues);  // Passa o studentId para o serviço
       closeDrawer();
     }
   };
