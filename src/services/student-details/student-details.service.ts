@@ -2,7 +2,7 @@ import { StudentFormValues } from '../../features/classes-app/components/student
 
 export const submitStudentDetails = async (studentId: string, data: StudentFormValues) => {
   try {
-    const response = await fetch(`/api/students/${studentId}/evaluation`, {
+    const response = await fetch(`/students/${studentId}/evaluation`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

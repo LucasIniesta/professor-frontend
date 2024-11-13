@@ -32,7 +32,7 @@ export const useStudentDetails = (): UseStudentDetails => {
 
   const handleFormSubmit = async () => {
     if (selectedStudent) {
-      await submitStudentDetails(selectedStudent.id, formValues);  // Passa o studentId para o serviço
+      await submitStudentDetails(selectedStudent.id, formValues);
       closeDrawer();
     }
   };
